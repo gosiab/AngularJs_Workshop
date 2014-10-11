@@ -9,6 +9,9 @@
   <body>
   
     <div class="container" role="main" ng-controller="MyFirstCtrl">
+    <div class="row">
+       <cart kafeleks="kafeleks"></cart>
+    </div>
       <div class="row">
             <div class="col-sm-12">
                 <sorting-button value="price" text="Price" sort="sorting"></sorting-button>
@@ -26,21 +29,16 @@
             </div>
         </div>
         <div class="row">
+          <div class="col-sm-12>">
+          </div>
           <div class="col-sm-12">
             <div class="list-group">
                 <div class="list-group-item" ng-repeat="kafelek in kafeleks | filter:filtering | orderBy:sorting.by:sorting.desc">
-                <div>
-                    <p><b>{{ kafelek.name }}</b>
-                      <span class="label label-info">{{ kafelek.price | currency }}</span>
-                    </p>
-                    <p><img src="{{ kafelek.product }}" /></p><br />
-                    <span>{{kafelek.shortDescription }}</span>
-                    <span ng-hide="!isShown">{{ kafelek.description }}</span>
-                    <p><button class="btn btn-default" ng-click="isShown = !isShown">Show..</button>
-                  </div>
-                </div>
+                 <product kafelek="kafelek"></product>
+                 </div>
               </div>
             </div>
+            
         </div>
     </div>
     
