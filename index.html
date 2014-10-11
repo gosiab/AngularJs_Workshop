@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app class="ng-scope">
+<html ng-app="ShopApp">
   <head>
     <meta charset="utf-8">
     <title>AngularJS</title>
@@ -9,20 +9,26 @@
   <body>
   
     <div class="container" role="main" ng-controller="MyFirstCtrl">
-     <div class="row">
+      <div class="row">
             <div class="col-sm-12">
-                <button class="btn btn-xs btn-default" ng-click="sortBy('price')">
-                    price
-                </button>
-                <button class="btn btn-xs btn-default" ng-click="sortBy('name')">
-                    name
-                </button>
+                <sorting-button value="price" text="Price" sort="sorting"></sorting-button>
+                <sorting-button value="name" text="Name" sort="sorting"></sorting-button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                    <input type="text" class="form-control" ng-model="filtering">
+                </div>
             </div>
         </div>
         <div class="row">
           <div class="col-sm-12">
             <div class="list-group">
-                <div class="list-group-item" ng-repeat="kafelek in kafeleks | orderBy:sorting.by:sorting.desc">
+                <div class="list-group-item" ng-repeat="kafelek in kafeleks | filter:filtering | orderBy:sorting.by:sorting.desc">
                 <div>
                     <p><b>{{ kafelek.name }}</b>
                       <span class="label label-info">{{ kafelek.price | currency }}</span>
@@ -30,16 +36,15 @@
                     <p><img src="{{ kafelek.product }}" /></p><br />
                     <span>{{kafelek.shortDescription }}</span>
                     <span ng-hide="!isShown">{{ kafelek.description }}</span>
-                    <p><button ng-click="isShown = !isShown">Show..</button>
+                    <p><button class="btn btn-default" ng-click="isShown = !isShown">Show..</button>
                   </div>
                 </div>
               </div>
             </div>
         </div>
-       <!-- <pre>{{ kafelek | json }}</pre>-->
-        <!--<pre>{{sorting | json}}</pre>-->
     </div>
-    <script src="main.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
