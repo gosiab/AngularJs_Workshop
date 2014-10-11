@@ -71,6 +71,13 @@ app.directive('product', function(){
     }
 });
 
+app.directive('pay', function(){
+  return {
+    restrict: 'E',
+  templateUrl: 'pay.html'
+  }
+});
+
 app.directive('cart', function(){
   return {
     restrict: 'E',
