@@ -1,10 +1,18 @@
 <div>
-                    <p><b>{{ kafelek.name }}</b>
-                      <span class="label label-info">{{ kafelek.price | currency }}</span>
-                    </p>
-                    <p><input type="checkbox" ng-model="kafelek.buy" > Kupuję!</p>
-                    <p><img src="{{ kafelek.product }}" /></p>
-                    <span>{{kafelek.shortDescription }}</span>
-                    <span ng-hide="!isShown">{{ kafelek.description }}</span>
-                    <p><button class="btn btn-default" ng-click="isShown = !isShown">Show..</button>
-                  </div>
+    <p>
+        <span class="label label-info">{{ kafelek.price | currency }}</span>
+        <b>{{ kafelek.name }}</b>
+    </p>
+    <p>
+        <img src="{{ kafelek.product }}" />
+        <span><input type="checkbox" ng-model="kafelek.buy">I buy!</span>
+    </p>
+    <p>
+        <span>{{ kafelek.shortDescription }}</span>
+        <span ng-hide="!isShown">{{kafelek.description}}</span>
+    </p>
+    <p>
+        <span><button class="btn btn-default" ng-click="isShown = !isShown">Show..</button> </span>
+    </p>
+    
+</div>

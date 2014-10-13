@@ -4,52 +4,34 @@
     <meta charset="utf-8">
     <title>AngularJS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-  
     <div class="container" role="main" ng-controller="MyFirstCtrl">
-    <div class="row">
-    <div>
-    <h4>W koszyku:</h4>
-       <h5><cart kafeleks="kafeleks"></cart></h5>
-       <button class="btn btn btn-default">Zapłać</button>
-       </div>
-    </div>
-    <div class="row">
-      <pay></pay>
-    <p></p>
-      <div class="row">
-            <div class="col-sm-12">
-                <sorting-button value="price" text="Price" sort="sorting"></sorting-button>
-                <sorting-button value="name" text="Name" sort="sorting"></sorting-button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </span>
-                    <input type="text" class="form-control" ng-model="filtering">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12>">
-          </div>
-          <div class="col-sm-12">
+        <sorting-button value="price" text="Price" sort="sorting"></sorting-button>
+        <sorting-button value="name" text="Name" sort="sorting"></sorting-button>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-search"></span>
+            </span>
+            <input type="text" class="form-control" ng-model="filtering">
+        </div>            
+        <div class="container">
             <div class="list-group">
+                <div class="col-xs-6 col-md-4">
                 <div class="list-group-item" ng-repeat="kafelek in kafeleks | filter:filtering | orderBy:sorting.by:sorting.desc">
-                 <product kafelek="kafelek"></product>
-                 </div>
-              </div>
+                    <product kafelek="kafelek"></product>
+                </div>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                <h4>W koszyku:</h4>
+                <h5><cart kafeleks="kafeleks"></cart></h5>
+                <button class="btn btn btn-default">Zapłać</button>
             </div>
-            
+            </div>
         </div>
-    </div>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
+      </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

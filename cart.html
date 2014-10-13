@@ -1,3 +1,14 @@
 <div ng-repeat="item in kafeleks | inCart">
-  {{ item.name }}
+  <p class="table-responsive">
+      <table class="table table-striped">
+          <tr>
+              <td>
+        <b>{{ item.name }}:</b> 
+              </td>
+              <td>
+        {{ item.price | currency}}
+              </td>
+          </tr>
+    </table>
+    </p>
 </div>

@@ -4,7 +4,7 @@ var app = angular.module("ShopApp", []);
 app.controller("MyFirstCtrl", function ($scope) {
   $scope.kafeleks = [
     {
-      product: 'http://lorempixel.com/output/city-q-c-177-102-4.jpg',
+      product: 'http://lorempixel.com/100/100/city',
       name: 'City',
       shortDescription: 'City description',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software..',
@@ -12,7 +12,7 @@ app.controller("MyFirstCtrl", function ($scope) {
       buy: false
     },
     {
-      product: 'http://lorempixel.com/output/food-q-c-177-102-4.jpg',
+      product: 'http://lorempixel.com/100/100/food',
       name: 'Food',
       shortdescription: 'Food description',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software..',
@@ -20,7 +20,7 @@ app.controller("MyFirstCtrl", function ($scope) {
       buy: false
     },
     {
-      product: 'http://lorempixel.com/output/nightlife-q-c-177-102-10.jpg',
+      product: 'http://lorempixel.com/100/100/nightlife',
       name: 'Nightlife',
       shortDescription: 'Nightlife description',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software..',
@@ -28,7 +28,7 @@ app.controller("MyFirstCtrl", function ($scope) {
       buy: false
     },
     {
-      product: 'http://lorempixel.com/output/transport-q-c-177-102-8.jpg',
+      product: 'http://lorempixel.com/100/100/transport',
       name: 'Transport',
       shortDescription: 'Transport description',
       description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software..',
